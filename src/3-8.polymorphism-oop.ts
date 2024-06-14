@@ -66,6 +66,20 @@
     }
   }
 
+  class Triangle extends Shape {
+    base: number;
+    height: number;
+
+    constructor(base: number, height: number) {
+      super();
+      this.base = base;
+      this.height = height;
+    };
+    getArea(): number {
+      return 0.5 * this.base * this.height
+    }
+  }
+
 
   const getShapeArea = (param: Shape) => {
     console.log(param.getArea());
@@ -75,10 +89,12 @@
   const shape1 = new Shape();
   const shape2 = new Circle(10);
   const shape3 = new Rectangle(10, 20);
+  const shape4 = new Triangle(8, 10);
 
   getShapeArea(shape1);
   getShapeArea(shape2);
   getShapeArea(shape3);
+  getShapeArea(shape4);
 
 
 
